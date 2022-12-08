@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Terminology</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="termStyle.css">
+
+<style>
+
+	.basic{
+		padding: 0;
+	}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #6495ED;
+
+}
+
+nav li a{
+	color: #E5E7E9;
+	font-weight: bold;
+}
+
+nav li a:hover{
+	background-color: #181B1E;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+
+.section ul{
+	list-style-type: none;
+	text-align: left;
+	margin: 0 27% 0;
+}
+
+#genTerm li{
+	margin: 0 0 5%;
+}
+
+#charTerm li{
+	margin: 0 0 5%;
+}
+
+
+hr{
+	border: solid 1px black;
+}
+
+footer{
+	background-color: #6495ED;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+}
+
+.stroke{
+	text-align: center;
+	margin: 5% 0 0;
+	padding-top: 2.2%;
+	color: #7FFF00;
+	min-height: 150px;
+	background-image: url(images/Bstroke.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 30%;
+}
+
+.light{
+	font-weight: lighter;
+}
+
+
+</style>
+
+
+</head>
+
+<body class="parallaxEffect">
+	<div id=wholePage> <!--helps with responsiveness-->
+
+<div id="top">
+	<h1>
+		<img src="images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+	</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<h1 class="stroke">Terminology</h1>
+<div class="parallaxEffect"></div>
+<div class="basic">
+	<nav>
+	<ul>
+			<li onclick="charTermShow()"><a>Character Specific Notations</a></li>
+			<li onclick="genTermShow()"><a>General Terminology</a></li>
+			<li onclick="notationShow()"><a>Input Notations</a></li>
+
+	</ul>
+</nav>
+
+	<div id="notation" class="section" style="display: block;">
+		<h2>Input Notation</h2>
+		<ul>
+			<li>n: <span class="light">Neutral</span></li>
+			<li>u: <span class="light">Up</span></li>
+			<li>u/f: <span class="light">Up and Forward</span></li>
+			<li>f: <span class="light">Forward</span></li>
+			<li>d/f: <span class="light">Down and Forward</span></li>
+			<li>d: <span class="light">Down</span></li>
+			<li>d/b: <span class="light">Down and Back</span></li>
+			<li>b: <span class="light">Back</span></li>
+			<li>u/b: <span class="light">Up and Back</span></li>
+			<li style="margin: 0 -50% 0; text-align: center;"><span class="light">*Hold input when directional notations are capitalized*</span></li>
+		</ul>
+		<hr>
+		<ul>
+			<li>1: <span class="light">Left Punch</span></li>
+			<li>2: <span class="light">Right Punch</span></li>
+			<li>3: <span class="light">Left Kick</span></li>
+			<li>4: <span class="light">Right Kick</span></li>
+		</ul>
+		<hr>
+		<ul>
+			<li>qcf: <span class="light">Quarter Circle Forward</span></li>
+			<li>qcb: <span class="light">Quarter Circle Back</span></li>
+			<li>hcf: <span class="light">Half Circle Forward</span></li>
+			<li>hcb: <span class="light">Half Circle Back</span></li>
+			<li>cd: <span class="light">Crouch Dash</span></li>
+			<li>ss: <span class="light">Sidestep</span></li>
+			<li>ssr: <span class="light">Sidestep Right</span></li>
+			<li>ssl: <span class="light">Sidestep Left</span></li>
+			<li>sw: <span class="light">Sidewalk</span></li>
+			<li>swr: <span class="light">Sidewalk Right</span></li>
+			<li>swl: <span class="light">Sidewalk Left</span></li>
+			<li>ws: <span class="light">While Standing</span></li>
+			<li>wr: <span class="light">While Running</span></li>
+			<li>iWR: <span class="light">Instant While Running</span></li>
+			<li>FC: <span class="light">Full Crouch</span></li>
+			<li>CH: <span class="light">Counter Hit</span></li>
+			<li>BT: <span class="light">Back Turn</span></li>
+			<li>KND: <span class="light">Knockdown</span></li>
+		</ul>
+		<hr>
+		<ul>
+			<li>~ : <span class="light">Immediately After</span></li>
+			<li>+ : <span class="light">Simultaneously</span></li>
+			<li>, : <span class="light">Followed By</span></li>
+		</ul>
+
+	</div><!--end of notation ID-->
+
+	<div id="genTerm" class="section" style="display: none;">
+		<h2>General Terms</h2>
+		<ul style="margin: 0 2% 0;">
+			<li>Backdash: <span class="light">The act of increasing distance between the opponent by tapping the back button twice.</span></li>
+			<li>Backsway: <span class="light">Refers to characters whose qcb notation causes a backward sway animation.</span></li>
+			<li>Backswing Blow: <span class="light">Similar to the backsway, a backswing blow refers to an attacking move that evades an opponent's attack; often by a great distance. (ex: Dragunov's qcb+2)</span></li>
+			<li>Ballerina Stun: <span class="light">Any move that causes an opponent to spin around when hit.</span></li>
+			<li>Block Stun: <span class="light">Referring to a move that was blocked and has some degree of stun, resulting in a longer recovery time for your character. Some block stuns are so powerful that it causes pushback upon your character.</span></li>
+			<li>Chicken: <span class="light">A classic technique not listed in the movelist that allows you to counteract a reversal. A chicken can be achieved by pressing f+1+3 or f+2+4 at the exact moment your limb is grabbed. For example, if you throw a "2" punch, you will press the f+2+4 option. If you kick with a "3", you will press the f+1+3 option. This can be looked at as matching pairs; if "1" is pressed then you need "3" and vice versa, "3" to "1" alongside the forward input.</span></li>
+			<li>Crouchdash<!--snakedash too-->: <span class="light">A type of movement that closes the distance in a smooth, sway-like manner.</span></li>
+			<li>Crush: <span class="light">A move that naturally avoids an attack; Often in a vertical manner.</span><br>Low Crush = <span class="light">A move that naturally avoids an incoming low attack.</span><br>High Crush = <span class="light">A move that naturally avoids an incoming high attack.</span></li>
+			<li>Double over/Crumple stun: <span class="light">A stun that causes your character to fall forward to their knees, usually guaranteeing a combo.</span></li>
+			<li>Fuzzy Duck: <span class="light">The act of covering both options when referring to an opponent's attack that has a high or low mixup.</span></li>
+			<li>Hellsweep: <span class="light">Designated for Mishimas but often referring to any fast-sweeping low.</span></li>
+			<li>Hopkick: <span class="light">Normally describing a jumping kick that's used as a launcher but can also refer to a jumping knee. (ex: Lee's u/f+4)</span></li>
+			<li>Ki Charge: <span class="light">Used to put your character into a counter hit state and is represented by an animation that leads to glowing sparkles after pressing all four buttons at the same time (1+2+3+4). Ki Charging leaves your character unable to block and is therefore wise to only use it in practice mode.</span></li>
+			<li>Korean Backdash: <span class="light">Originating in the Korean arcade scene, this technique involves cancelling the generic backdash by adding a d/b after tapping back twice. Refer to the Advance technique page for details.</span></li>
+			<li>Jail: <span class="light">Referring to 2 or more hits that prevent you from ducking after blocking the 1st hit.</span></li>
+			<li>Magic 4: <span class="light">A term that describes when a character has a fast standing "4" kick that allows for a combo on counter hit.</span></li>
+			<li>Nosebleed: <span class="light">A type of stun that causes your character to slowly fall backwards. Some characters that cause nosebleeds may be able to combo from it. To prevent yourself from being juggled, simply hold down during the animation to fall quicker.</span></li>
+			<li>Okizeme: <span class="light">A term referring to the act of pressuring an opponent while they are getting up after being knocked to the ground.</span></li>
+			<li>Parry: <span class="light">My definition of parry is when you move aside an opponent's limb but don't do damage in return; whereas as my definition of a <em>REVERSAL</em> is when you actually damage an opponent as a consequence.</span></li>
+			<li>Slash Kick: <span class="light">A term that is used to describe the majority of character's airborne running "3" kick.</span></li>
+			<li>Snake edge: <span class="light">The name of a move that appears only on Bryan's movelist, but is often referred to as any slow-sweeping low.</span></li>
+			<li>Spike: <span class="light">A move that slams your opponent down in front of you; which puts them in an instant ground state that cannot be techrolled in either direction. Often done at the end of combos to create an opportunity for an okizeme.</span></li>
+			<li>String: <span class="light">A sequence of 2 or more hits.</span></li>
+			<li>Techroll: <span class="light">Another word for describing the Japanese martial art technique of <em>Ukemi</em>, this is the ability to recover from being grounded by the opponent. In some cases, Ukemi or tech-rolling, can reduce the damage of a fall; such as the case with timing a techroll after Armor King's or King's giant swing throw.</span></li>
+			<li>Wall Break/Balcony Break: <span class="light">A move that causes a wall or balcony to break.</span></li>
+			<li>Wall Carry: <span class="light">The act of adjusting a juggle/combo to carry an opponent to the wall before or after performing a tailspin.</span></li>
+			<li>Wall Splat: <span class="light">A move that forcefully knocks your opponent into a wall.</span></li>
+			<li>Wavedash: <span class="light">Three or more consecutive crouchdashes.</span></li>
+		</ul>
+	</div>
+
+	<div id="charTerm" class="section" style="display: none;">
+		<h2>Character Specific Notations</h2>
+		<ul style="margin: 0 2% 0;">
+			<li>Akuma: <span class="light">FADC - Focus Attack Dash Cancel</span></li>
+			<li>Alisa: <span class="light">SBT - Single Boot | DES - Destructive Form | DBT - Dual Boot</span></li>
+			<li>Anna: <span class="light">CJM - Chaos Judgment</span></li>
+			<li>Claudio: <span class="light">STB - Starburst</span></li>
+			<li>Eddy: <span class="light">HSP - Handstand | RLX - Relax</span></li>
+			<li>Eliza: <span class="light">MG - Moon Glide</span></li>
+			<li>Feng: <span class="light">STC - Shifting clouds | KNP - Deceptive Step but referred to as Kenpo stance</span></li>
+			<li>Geese: <span class="light">MAX - Max Mode</span></li>
+			<li>Gigas: <span class="light">GOL - Goliath stance | SG - Golem stance</span></li>
+			<li>Heihachi: <span class="light">RAI - Raijin stance</span></li>
+			<li>Hwoarang: <span class="light">LFF/LS - Left Foot Forward | RFF/RS - Right Foot Forward | LFS - Left Flamingo Stance | RFS - Right Flamingo Stance</span></li>
+			<li>Jack 7: <span class="light">CSK - Cossack Kicks | SIT - Sitting stance</span></li>
+			<li>Jin: <span class="light">MA - Mental Alertness | ZEN - Zenshin stance</span></li>
+			<li>Josie: <span class="light">SWS - Switch Stance | SWB - Sway Back</span></li>
+			<li>Julia: <span class="light">Windroll | Swift Step</span></li>
+			<li>Katarina: <span class="light">HAR - Harrier</span></li>
+			<li>Kazumi: <span class="light">Fearless Warrior</span></li>
+			<li>Kazuya: <span class="light">DVK - Devil Form</span></li>
+			<li>King: <span class="light">Jaguar Step</span></li>
+			<li>Kuma/Panda: <span class="light">HBS - Hunting Bear Stance | SIT - Sitting stance | ROL - Roll</span></li>
+			<li>Lars: <span class="light">SEN - Silent Entry | DEN - Dynamic Entry</span></li>
+			<li>Lei: <span class="light">SNK - Snake | DRG - Dragon | TGR - Tiger | PAN - Panther | CRA - Crane | DRU - Drunken Master Walk | PHX - Phoenix Illusion | FCD RLX - Sidewind (feet first) | SLD RLX - Sidewind (head first) | PLD RLX - Play Dead</span></li>
+			<li>Law: <span class="light">DSS - Dragon Charge | TFS - Fake Step</span></li>
+			<li>Lee: <span class="light">HMS - Hitman stance | MS - Mist Step</span></li>
+			<li>Leo: <span class="light">KNK - Jin Ji Du Li | BOK - Fo Bu</span></li>
+			<li>Lili: <span class="light">Fiesty Rabbit | Dew Glide</span></li>
+			<li>Lucky Chloe: <span class="light">TWISTL - Left Twist | TWISTR - Right Twist | SCT - Scoot</span></li>
+			<li>Marduk: <span class="light">VTS - Ready position but referred to as Vale Tudo Stance | Mount</span></li>
+			<li>Master Raven: <span class="light">HAZ - Haze</span></li>
+			<li>Miguel: <span class="light">SAV - Savage stance</span></li>
+			<li>Negan: <span class="light">INT - Intimidation</span></li>
+			<li>Shaheen: <span class="light">SNK - Stealth Step</span></li>
+			<li>Steve: <span class="light">LWV - Left Weave | RWV - Right Weave | ALB - Albatross | DCK - Duck |  EXT DCK - Extended Duck | PAB - Peakaboo | SWY - Sway | FLIK - Flicker stance</span></li>
+			<li>Xiaoyu: <span class="light">AOP - Art of Phoenix | HYP - Hypnotist Stance | RDS - Rain Dance Stance</span></li>
+			<li>Yoshimitsu: <span class="light">KIN - Kincho | MED - Meditation | FLE - Flea | INS - Indian stance | DGF - Manji Dragonfly | NSS - Mutou no Kiwami</span></li>
+		</ul>
+	</div>
+
+</div> <!--end of basic div-->
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!--<script>
+		$('.carousel').carousel({
+  		interval: 12000
+})
+	</script>-->
+
+	<!--script for radar chart *attributes are listed*
+	<script> function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(209,44,38,0.23)",/*OUTLINE COLOR*/strokeColor : "rgba(209,44,38,1)",pointColor : "rgba(255,0,0,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1.00)",/*ATTR.POINTS*/data : [5,6,7,5,7,],title:""},]};ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,/*RADAR LINES*/scaleLineColor:"rgba(255,255,255,0.31)",scaleOverlay :false,scaleOverride :false,scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,legend:false,maxLegendCols:5,legendBlockSize:15,legendFillColor:'rgba(255,255,255,0.00)',legendColorIndicatorStrokeWidth:1,legendPosX:-2,legendPosY:4,legendXPadding:0,legendYPadding:0,legendBorders:false,legendBordersWidth:1,legendBordersStyle:"solid",legendBordersColors:"rgba(102,102,102,1)",legendBordersSpaceBefore:0,legendBordersSpaceLeft:0,legendBordersSpaceRight:0,legendBordersSpaceAfter:0,legendSpaceBeforeText:0,legendSpaceLeftText:0,legendSpaceRightText:0,legendSpaceAfterText:0,legendSpaceBetweenBoxAndText:0,legendSpaceBetweenTextHorizontal:0,legendSpaceBetweenTextVertical:0,legendFontFamily:"'Open Sans'",legendFontStyle:"normal normal",legendFontColor:"rgba(0,0,0,1)",legendFontSize:20,showYAxisMin:false,rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,yAxisRight:false,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",/*SCALE NUMBERS*/scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",/*FONT COLOR*/pointLabelFontColor:"rgba(31, 53, 162,1)",pointLabelFontSize:15,angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,scaleShowGridLines:true,scaleGridLineStyle:"solid",scaleGridLineWidth:1,scaleGridLineColor:"rgba(0,0,0,0.1)",scaleXGridLinesStep:1,scaleYGridLinesStep:3,segmentShowStroke:true,segmentStrokeStyle:"solid",segmentStrokeWidth:2,segmentStrokeColor:"rgba(255,255,255,1.00)",datasetStroke:true,datasetFill : true,datasetStrokeStyle:"solid",datasetStrokeWidth:2,bezierCurve:true,bezierCurveTension :0.4,pointDotStrokeStyle:"solid",pointDotStrokeWidth : 1,pointDotRadius : 3,pointDot : false,scaleTickSizeBottom:5,scaleTickSizeTop:5,scaleTickSizeLeft:5,scaleTickSizeRight:5,graphMin:1,graphMax:10,barShowStroke : false,barBorderRadius:0,barStrokeStyle:"solid",barStrokeWidth:1,barValueSpacing:15,barDatasetSpacing:0,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,scaleBackdropPaddingY :2,animationEasing:'easeInQuad',animateRotate:true,animateScale:false,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> particles javascript
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>-->
+
+	<script>
+		var x = document.getElementById("notation");
+		var y = document.getElementById("genTerm");
+		var z = document.getElementById("charTerm");
+
+			function notationShow() {
+			  if (x.style.display === "none") {
+			  	if(y.style.display === "block" || z.style.display === "block")
+			  	{
+			  	y.style.display = "none"
+			  	z.style.display = "none"
+			    x.style.display = "block";
+			}
+			  } else {
+			    x.style.display = "block";
+			  }
+			}
+
+			function genTermShow() {
+			  if (y.style.display === "none") {
+			  	if (x.style.display === "block" || z.style.display === "block")
+			  	{
+			  	x.style.display = "none"
+			  	z.style.display = "none"
+			    y.style.display = "block";
+			}
+			  } else {
+			    y.style.display = "block";
+			  }
+			}
+
+			function charTermShow() {
+
+			  if (z.style.display === "none") {
+			  	if (x.style.display === "block" || y.style.display === "block")
+			  	{
+			  	x.style.display = "none"
+			  	y.style.display = "none"
+			    z.style.display = "block";
+			}
+			  } else {
+			    z.style.display = "block";
+			  }
+			}
+	</script>
+
+</body>
+</html>

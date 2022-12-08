@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Hwoarang</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="../character_style.css">
+
+<style>
+
+		body{
+	background-color: #264185;
+	color: #E4E4E4;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #1A1A1A;
+
+}
+
+nav li a{
+	color: #E5E7E9;
+}
+	.charBox{
+	background-image: url('../images/hwoChar.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	border: solid 3px white;
+	border-top: none;
+}
+
+nav li a:hover{
+	background-color: #63181B;
+	text-decoration: none;
+	color: white;
+}
+
+.infoBox{
+	background-color: #9F5A11;
+	color: #E4E4E4;		/*#E5E7E9: off-white*/
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	max-height: 550px;
+	text-align: center;
+	float: right;
+	padding: 2% 3%;
+	width: 61%;
+	text-align: left;
+	display: block;
+	border: solid 3px white;
+	border-top: none;
+}
+
+.carousel-indicators li{
+	background-color: white;
+}
+
+.carousel-indicators .active{
+	background-color: #791600;
+}
+
+#summary a{
+	color: #D5C650;
+}
+
+#media{
+	background-color: #9F5A11;
+	width: 100%;
+	border: solid 3px white;
+}
+
+#media p{
+	color: #E4E4E4;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+table {
+	background-color: #9F5A11;
+	color: white;
+  	font-family: arial, sans-serif;
+  	font-weight: bold;
+  	border-collapse: collapse;
+  	width: 50%;
+  	margin: 0% 25% 0% 25%;
+}
+
+td, th {
+  border: 1px solid #791600;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #1A1A1A;
+}
+
+footer{
+	background-color: #791600;
+	color: black;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+	<div id=wholePage> <!--helps with responsiveness-->
+
+	<div id="top">
+<h1>
+	<img src="../images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="../terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<div class="both">
+<div class="charBox">
+	<!--<img src="../images/AkumaBox.png">-->
+</div>
+
+<div class="infoBox">
+		<div id="particles-js">
+		</div>
+
+	<h1 class="first" style="color: #791600;">Strengths</h1>
+	<ul>
+		<li>Great mixup pressure</li>
+		<li>Massive damage</li>
+		<li>Huge safe/plus moves from flamingo</li>
+		<li>Great wall game</li>
+		<li>Rage Art is a safe mid</li>
+		<li>Good tech setups</li>
+	</ul>
+
+	<h1 class="second" style="color: #791600;">Weaknesses</h1>
+	<ul>
+		<li>Poor range</li>
+		<li>Many duckable strings</li>
+		<li>Weak to sidestep right</li>
+		<li>Few mid-range options</li>
+		<li>Poor block punishers</li>
+	</ul>
+
+	<div class="rChart">						<!--Below is for the Radar Chart-->
+
+		<h1 class="third" style="color: #791600;">Skills</h1>
+
+		<!--radar chart-->
+		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
+
+	</div>
+
+
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="summary">
+	<h1 style="color: #E5E7E9;">Hwoarang</h1>
+		<p style="font-size: 1.1rem">Introduced in Tekken 3 (1997) and a student of Taekwondo, Hwoarang has become a staple character within the series. He is depicted as a very flamboyant, boastful fighter who tends to find himself in dangerous situations. He has a strong respect for his master Baek Doo San and a strong rivalry with Jin Kazama that has grown even larger since Tekken 3. Hwoarang's playstyle relies heavily on offensive pressure, his array of stances and their options, and situational awareness. Therefore to be effective with and against him, it is crucial to learn what moves come from which stance, what properties they have, and how to use them properly to gain the advantage in the match.
+		</p>
+</div>
+
+<div id="media">
+
+<h1 style="color: #791600;">Key Moves</h1>
+
+<p>1. One of his best offensive tools that is natural on hit and put him in right flamingo; giving him more options to mixup an opponent.</p>
+
+<p>2. Another good sequence to establish an offensive is his 1,2 into right or left flamingo while still having access to movement options.</p>
+
+<p>3. One of his scariest launcher, this move has two version but the blue sparks version (JFSR: Just Frame Sky Rocket) is the best option, due to the pushback and faster recovery time.</p>
+
+<p>4. Known as "Backlash", this move is Hwoarang's armored homing move, that instantly tailspins on hit providing a combo.</p>
+
+<p>5. A good quick low poke leaving him in RFF/RS that is good for chipping away at an opponent's health and provides a combo on counter hit.</p>
+
+<p>6. Although a short ranged move, it s a good, safe, mid launcher that launches on normal hit at i15.</p>
+
+<p>7. A great 11f punisher that can be cancelled into Left Flamingo Stance, providing options to mixup the opponent.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block" controls>
+		<source src="../videos/hwo1.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d+3,4 (RFS options)</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo2.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: 1,2, (3: RFS or 4: LFS)</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo3.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,n,d,d/f+4 (Just frame: f,n,d/f+4)</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo4.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: Right Stance 3~4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo5.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: SS+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo6.mp4" type="video/mp4" id="hwo6">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/f+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hwo7.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: 4,3 (cancel: 4,3~f)</h5>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+</div>
+
+<div class="players">
+	<h1 style="color: #E5E7E9;">Notable players who play this character</h1>
+	<table>
+  <tr>
+    <th>Player</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Yeonarang</td>
+    <td>South Korea</td>
+  </tr>
+  <tr>
+    <td>Speedkicks</td>
+    <td>United States</td>
+  </tr>
+  <tr>
+    <td>Muse</td>
+    <td>South Korea</td>
+  </tr>
+  <tr>
+    <td>Hyuk/Hyu~</td>
+    <td>South Korea</td>
+  </tr>
+  <tr>
+    <td>Batz</td>
+    <td>Japan</td>
+  </tr>
+  <tr>
+    <td>Rest</td>
+    <td>Australia</td>
+  </tr>
+  <tr>
+    <td>Asellas</td>
+    <td>South Korea</td>
+  </tr>
+</table>
+
+</div>
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+				$('.carousel').carousel({
+  		interval: 30000
+});
+
+		$('.carousel').on('slide.bs.carousel', function () {
+  		var vid = document.getElementsByTagName("VIDEO");
+  		for (var i = 0; i < vid.length; i++) {
+  			vid[i].pause();
+  		}
+});
+	</script>
+
+	<!--script for radar chart *attributes are listed*-->
+	<script> function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(121,22,0,0.23)",/*OUTLINE COLOR*/strokeColor : "rgba(121,22,0,1)",pointColor : "rgba(255,0,0,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1.00)",/*ATTR.POINTS*/data : [6,6,5,8,4,],title:""},]};ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,/*RADAR LINES*/scaleLineColor:"rgba(255,255,255,0.31)",scaleOverlay :false,scaleOverride :false,scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,legend:false,maxLegendCols:5,legendBlockSize:15,legendFillColor:'rgba(255,255,255,0.00)',legendColorIndicatorStrokeWidth:1,legendPosX:-2,legendPosY:4,legendXPadding:0,legendYPadding:0,legendBorders:false,legendBordersWidth:1,legendBordersStyle:"solid",legendBordersColors:"rgba(102,102,102,1)",legendBordersSpaceBefore:0,legendBordersSpaceLeft:0,legendBordersSpaceRight:0,legendBordersSpaceAfter:0,legendSpaceBeforeText:0,legendSpaceLeftText:0,legendSpaceRightText:0,legendSpaceAfterText:0,legendSpaceBetweenBoxAndText:0,legendSpaceBetweenTextHorizontal:0,legendSpaceBetweenTextVertical:0,legendFontFamily:"'Open Sans'",legendFontStyle:"normal normal",legendFontColor:"rgba(0,0,0,1)",legendFontSize:20,showYAxisMin:false,rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,yAxisRight:false,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",/*SCALE NUMBERS*/scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",/*FONT COLOR*/pointLabelFontColor:"rgba(255,255,255,1)",pointLabelFontSize:15,angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,scaleShowGridLines:true,scaleGridLineStyle:"solid",scaleGridLineWidth:1,scaleGridLineColor:"rgba(0,0,0,0.1)",scaleXGridLinesStep:1,scaleYGridLinesStep:3,segmentShowStroke:true,segmentStrokeStyle:"solid",segmentStrokeWidth:2,segmentStrokeColor:"rgba(255,255,255,1.00)",datasetStroke:true,datasetFill : true,datasetStrokeStyle:"solid",datasetStrokeWidth:2,bezierCurve:true,bezierCurveTension :0.4,pointDotStrokeStyle:"solid",pointDotStrokeWidth : 1,pointDotRadius : 3,pointDot : false,scaleTickSizeBottom:5,scaleTickSizeTop:5,scaleTickSizeLeft:5,scaleTickSizeRight:5,graphMin:1,graphMax:10,barShowStroke : false,barBorderRadius:0,barStrokeStyle:"solid",barStrokeWidth:1,barValueSpacing:15,barDatasetSpacing:0,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,scaleBackdropPaddingY :2,animationEasing:'easeInQuad',animateRotate:true,animateScale:false,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script>function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(121,22,0,0.23)",
+		/*OUTLINE COLOR*/
+		strokeColor : "rgba(121,22,0,1)",pointColor : "rgba(255,0,0,1)",markerShape :"diamond",pointStrokeColor : "rgba(255,255,255,1.00)",
+		/*ATTR.POINTS*/
+		data : [7,7,4,9,5,],title:""},]};
+		ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",
+		/****************************************************************************/
+		spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,
+		scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,
+		/*RADAR LINES*/
+		scaleLineColor:"rgba(255,255,255,0.31)",scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,
+		rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",
+		/*SCALE NUMBERS*/
+		scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,
+		/*FONT SETTINGS*/
+		pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",pointLabelFontColor:"rgba(255,255,255,1)",pointLabelFontSize:15,
+		angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,
+		/*ANNOTATION SETTINGS*/
+		annotateDisplay:true,annotateLabel:'<%=v3%>',annotatePadding:"0px 5px 0px 5px",annotateFontFamily:"'Cuprum'",annotateFontStyle:"normal bolder",annotateFontColor:"rgba(0,0,0,1)",annotateFontSize:12,
+		annotateBorderRadius:"5px",annotateBorder:"1px rgba(170,170,170,0.7) solid ",annotateBackgroundColor:'rgba(255,255,255,0.75)',
+		/*POINT DOT SETTINGS*/
+		pointDotStrokeStyle:"solid",pointDotStrokeWidth : 0.1,pointDotRadius : 4,pointDot : true,
+		graphMin:1,graphMax:10,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,
+		scaleBackdropPaddingY :2,
+		animationEasing:'easeInQuad',animateRotate:true,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,
+		onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> <!--particles javascript-->
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>
+
+</body>
+</html>

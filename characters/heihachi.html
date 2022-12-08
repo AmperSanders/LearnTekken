@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Heihachi Mishima</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="../character_style.css">
+
+<style>
+
+		body{
+	/*margin: 0px 275px 0px;
+	display: inline-block;*/
+	background-color: #111A3F;
+	color: #E4E4E4;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #1A1A1A;
+
+}
+
+nav li a{
+	color: #E5E7E9;
+}
+	.charBox{
+	background-image: url('../images/heiChar.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	border: solid 3px #DDAB25;
+	border-top: none;
+}
+
+nav li a:hover{
+	background-color: #63181B;
+	text-decoration: none;
+	color: white;
+}
+
+.infoBox{
+	background-color: #3D0A0C;
+	color: #E4E4E4;		/*#E5E7E9: off-white*/
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	max-height: 550px;
+	text-align: center;
+	float: right;
+	padding: 2% 3%;
+	width: 61%;
+	text-align: left;
+	display: block;
+	border: solid 3px #DDAB25;
+	border-top: none;
+	/*min-width: 61%;*/
+	/*overflow: scroll;
+	margin-right: 5%;
+	position: absolute;
+	margin-left: 1%;
+}*/
+}
+
+.carousel-indicators li{
+	background-color: white;
+}
+
+.carousel-indicators .active{
+	background-color: #DF6F22;
+}
+
+#summary a{
+	color: #D5C650;
+}
+
+#media{
+	background-color: #3D0A0C;
+	width: 100%;
+	border: solid 3px #DDAB25;
+}
+
+#media p{
+	color: #E4E4E4;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+table {
+	background-color: #3D0A0C;
+	color: white;
+  	font-family: arial, sans-serif;
+  	font-weight: bold;
+  	border-collapse: collapse;
+  	width: 50%;
+  	margin: 0% 25% 0% 25%;
+}
+
+td, th {
+  border: 1px solid #D5C650;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #1A1A1A;
+}
+
+footer{
+	background-color: #F6B749;
+	color: black;
+	font-weight:
+	bold; opacity: 0.9;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+	<div id=wholePage> <!--helps with responsiveness-->
+
+	<div id="top">
+<h1>
+	<img src="../images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="../terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<div class="both">
+<div class="charBox">
+	<!--<img src="../images/AkumaBox.png">-->
+</div>
+
+<div class="infoBox">
+		<div id="particles-js">
+		</div>
+
+	<h1 class="first" style="color: #F6B749;">Strengths</h1>
+	<ul>
+		<li>Great movement</li>
+		<li>Damaging counter hit game</li>
+		<li>Good mid pokes</li>
+		<li>Rushdown pressure</li>
+		<li>High damage</li>
+	</ul>
+
+	<h1 class="second" style="color: #F6B749;">Weaknesses</h1>
+	<ul>
+		<li>Risky low pokes</li>
+		<li>Poor ws punishers</li>
+		<li>Weak to sidestep left</li>
+		<li>Requires amazing execution for -15f electric punishes</li>
+	</ul>
+
+	<div class="rChart">						<!--Below is for the Radar Chart-->
+
+		<h1 class="third" style="color: #F6B749;">Skills</h1>
+
+		<!--radar chart-->
+		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
+
+	</div>
+
+
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="summary">
+	<h1 style="color: #F6B749;">Heihachi Mishima</h1>
+		<p style="font-size: 1.1rem">One of the original Tekken character from the first Tekken (1994) and main character of the series, Heihachi is the grandfather of Tekken and everything Mishima. Still styling the same hair style from the first installment, Heihachi is the original "King of Iron Fist", Leader of the Mishima Zaibatsu, and has been a ending boss character in some previous installments. As mentioned, Heihachi is categorized as a Mishima character due to having a flash punch (1,1,2), a wavedash, and an EWGF (Electric Wind God Fist). He is a high execution character, often relying on electrics for his whiff and some block punishes. He is described as a rushdown character due to the array of powerful mid options and counter hit opportunities that he can create.
+		</p>
+</div>
+
+<div id="media">
+
+<h1 style="color: #F6B749;">Key Moves</h1>
+
+<p>1. One on his best poking tools that has 2 extensions that keeps the opponent in check. One being good for more pressure and the other being good at the wall for its wallsplat properties and being able to hit confirm the second hit.</p>
+
+<p>2. A safe move that is used to fish for counter hit, which leads to a combo. It can also be used to wallsplat.</p>
+
+<p>3. A heavy low that is used to add low pressure to your offense and is very plus on hit, but is launch punishable on block.</p>
+
+<p>4. A good overhead kick that provides a combo on hit and can be used in to catch a crouching opponent.</p>
+
+<p>5. A very powerful tool much like f,F+3 but faster and deadlier, it's a great tool to apply heavy pressure to the opponent. If it hits a crouching opponent, d/f+1,2 is guaranteed. If hit near a wall, the d/f+1,2 will wallsplat the opponent.</p>
+
+<p>6. Like every Mishima, Heihachi comes with his very own electric. Unlike most Mishimas, Heihachi does have access to a hopkick but his electric is what will do most of the launching on block and whiff; making it crucial to be able to throw electrics out at will.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block" controls>
+		<source src="../videos/hei1.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/f+1 -> d/f+1,1 -> d/f+1,2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hei2.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f+3</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hei3.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/b+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hei4.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,F+3</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hei5.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/hei6.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,n,d,d/f+2</h5>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+</div>
+
+<div class="players">
+	<h1 style="color: #F6B749;">Notable players who play this character</h1>
+	<table>
+  <tr>
+    <th>Player</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>JDCR</td>
+    <td>South Korea</td>
+  </tr>
+  <tr>
+    <td>Akash/Mingriah</td>
+    <td>United States</td>
+  </tr>
+  <tr>
+    <td>HarryPotter</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>Makoryu</td>
+    <td>Japan</td>
+  </tr>
+</table>
+
+</div>
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+				$('.carousel').carousel({
+  		interval: 30000
+});
+
+		$('.carousel').on('slide.bs.carousel', function () {
+  		var vid = document.getElementsByTagName("VIDEO");
+  		for (var i = 0; i < vid.length; i++) {
+  			vid[i].pause();
+  		}
+});
+	</script>
+
+	<!--script for radar chart *attributes are listed*-->
+	<script>function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(246,183,73,0.23)",
+		/*OUTLINE COLOR*/
+		strokeColor : "rgba(246,183,73,1)",pointColor : "rgba(255,255,255,1)",markerShape :"diamond",pointStrokeColor : "rgba(255,255,255,1.00)",
+		/*ATTR.POINTS*/
+		data : [7,7,4,9,5,],title:""},]};
+		ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",
+		/****************************************************************************/
+		spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,
+		scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,
+		/*RADAR LINES*/
+		scaleLineColor:"rgba(255,255,255,0.31)",scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,
+		rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",
+		/*SCALE NUMBERS*/
+		scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,
+		/*FONT SETTINGS*/
+		pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",pointLabelFontColor:"rgba(255,255,255,1)",pointLabelFontSize:15,
+		angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,
+		/*ANNOTATION SETTINGS*/
+		annotateDisplay:true,annotateLabel:'<%=v3%>',annotatePadding:"0px 5px 0px 5px",annotateFontFamily:"'Cuprum'",annotateFontStyle:"normal bolder",annotateFontColor:"rgba(0,0,0,1)",annotateFontSize:12,
+		annotateBorderRadius:"5px",annotateBorder:"1px rgba(170,170,170,0.7) solid ",annotateBackgroundColor:'rgba(255,255,255,0.75)',
+		/*POINT DOT SETTINGS*/
+		pointDotStrokeStyle:"solid",pointDotStrokeWidth : 0.1,pointDotRadius : 4,pointDot : true,
+		graphMin:1,graphMax:10,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,
+		scaleBackdropPaddingY :2,
+		animationEasing:'easeInQuad',animateRotate:true,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,
+		onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> <!--particles javascript-->
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Kazuya Mishima</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="../character_style.css">
+
+<style>
+
+		body{
+	background-color: #1B1B1B;
+	color: #E4E4E4;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #808B96;
+
+}
+
+nav li a{
+	color: black;
+}
+	.charBox{
+	background-image: url('../images/KazChar.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40% 50%;
+	border: solid 3px #7D3C98;
+	border-top: none;
+}
+
+nav li a:hover{
+	background-color: #181B1E;
+	text-decoration: none;
+	color: white;
+}
+
+.infoBox{
+	background-color: #7A181B;
+	color: #E4E4E4;		/*#E5E7E9: off-white*/
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	max-height: 550px;
+	text-align: center;
+	float: right;
+	padding: 2% 3%;
+	width: 61%;
+	text-align: left;
+	display: block;
+	border: solid 3px #7D3C98;
+	border-top: none;
+}
+
+.carousel-indicators li{
+	background-color: white;
+}
+
+.carousel-indicators .active{
+	background-color: #D5C650;
+}
+
+#summary a{
+	color: #D5C650;
+}
+
+#media{
+	background-color: #7A181B;
+	width: 100%;
+	border: solid 3px #7D3C98;
+}
+
+#media p{
+	color: #E4E4E4;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+table {
+	background-color: #1B1B1B;
+	color: white;
+  	font-family: arial, sans-serif;
+  	font-weight: bold;
+  	border-collapse: collapse;
+  	width: 50%;
+  	margin: 0% 25% 0% 25%;
+}
+
+td, th {
+  border: 1px solid #D8E0E3;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #7A181B;
+}
+
+footer{
+	background-color: #808B96;
+	color: black;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+	<div id=wholePage> <!--helps with responsiveness-->
+
+	<div id="top">
+<h1>
+	<img src="../images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="../terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<div class="both">
+<div class="charBox">
+	<!--<img src="../images/AkumaBox.png">-->
+</div>
+
+<div class="infoBox">
+		<div id="particles-js">
+		</div>
+
+	<h1 class="first" style="color: black;">Strengths</h1>
+	<ul>
+		<li>Excellent space control</li>
+		<li>Wall pressure</li>
+		<li>Good counter hit</li>
+		<li>Great okizeme</li>
+		<li>Great damage</li>
+	</ul>
+
+	<h1 class="second" style="color: black;">Weaknesses</h1>
+	<ul style="width: 350px;">
+		<li>Limited poking tools</li>
+		<li>Heavy commitment</li>
+	</ul>
+
+	<div class="rChart">						<!--Below is for the Radar Chart-->
+
+		<h1 class="third" style="color: black;">Skills</h1>
+
+		<!--radar chart-->
+		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
+
+	</div>
+
+
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="summary">
+	<h1 style="color: #E5E7E9;">Kazuya Mishima</h1>
+		<p style="font-size: 1.1rem">Another original Tekken character from the first Tekken (1994) and main character of the series, Kazuya has been in every installment except Tekken 3 (1997) and head of G-Corporation. Relationships with Kazuya have not always been the best with his father, <a href="heihachi.html">Heihachi Mishima</a>, his wife Jun Kazama, and his son <a href="jin.html">Jin Kazama</a>, his half-brother <a href="lars.html">Lars Alexandersson</a> and adoptive brother <a href="lee.html">Lee Chaolan</a>. Kazuya also possesses the Devil Gene and can change into the form in gameplay after activating rage drive. Kazuya is the definition of a Mishima character with a multitude of tools for many situations. He also requires high execution just like Heihachi.</p>
+</div>
+
+<div id="media">
+
+<h1 style="color: black;">Key Moves</h1>
+
+<p>1. Greatly buffed in season 4, this kick now hits grounded from all angles and is a great low to mixup opponents.</p>
+
+<p>2. A fantastic punisher given to Mishima style characters. This move is better when hit confirmed as it can be launched punished if blocked.</p>
+
+<p>3. A move that can't be punished on blocked and is good for checking a crouching or a grounded opponent. When landed on Counter Hit, it will grant you the opportunity for a combo.</p>
+
+<p>4. A good tool to stop a stepping opponent and will crumple stun on counter hit leading to a potential combo.</p>
+
+<p>5. A very useful move to check crouching opponents and generally apply pressure.</p>
+
+<p>6. A naturally evasive move that allows for a combo on normal hit.</p>
+
+<p>7. A great pressure tool and allows for a wallsplat to combo.</p>
+
+<p>8. A scary move to defend against with its increased tracking in season 4, this move will allow for a wall combo if hit from the correct angle.</p>
+
+<p>9. Like every Mishima, Kazuya is equipped with his very own powerful electric; which is great for whiff and block punishing.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block" controls>
+		<source src="../videos/kaz1.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/b+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz2.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: 1,1,2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz3.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,F+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz4.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/f+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz5.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz6.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: SS+3</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz7.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: u/f+3</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz8.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,n,d,d/f+4,1</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/kaz9.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,n,d,d/f+2</h5>
+  </div>
+    </div>
+	</div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+</div>
+
+<div class="players">
+	<h1 style="color: #E5E7E9;">Notable players who play this character</h1>
+	<table>
+  <tr>
+    <th>Player</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Keisuke</td>
+    <td>Japan</td>
+  </tr>
+  <tr>
+    <td>Nene the Dragon</td>
+    <td>Peru</td>
+  </tr>
+  <tr>
+    <td>Kodee</td>
+    <td>United States</td>
+  </tr>
+  <tr>
+    <td>Ryan Hart</td>
+    <td>United Kingdom</td>
+  </tr>
+  <tr>
+    <td>Knee</td>
+    <td>South Korea</td>
+  </tr>
+</table>
+</div>
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+				$('.carousel').carousel({
+  		interval: 30000
+});
+
+		$('.carousel').on('slide.bs.carousel', function () {
+  		var vid = document.getElementsByTagName("VIDEO");
+  		for (var i = 0; i < vid.length; i++) {
+  			vid[i].pause();
+  		}
+});
+	</script>
+
+	<!--script for radar chart *attributes are listed*-->
+	<script>function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(255,255,255,0.23)",
+		/*OUTLINE COLOR*/
+		strokeColor : "rgba(255,255,255,1)",pointColor : "rgba(0,0,0,1)",markerShape :"diamond",pointStrokeColor : "rgba(255,255,255,1.00)",
+		/*ATTR.POINTS*/
+		data : [8,8,5,7,5,],title:""},]};
+		ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",
+		/****************************************************************************/
+		spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,
+		scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,
+		/*RADAR LINES*/
+		scaleLineColor:"rgba(255,255,255,0.31)",scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,
+		rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",
+		/*SCALE NUMBERS*/
+		scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,
+		/*FONT SETTINGS*/
+		pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",pointLabelFontColor:"rgba(0,0,0,1)",pointLabelFontSize:15,
+		angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,
+		/*ANNOTATION SETTINGS*/
+		annotateDisplay:true,annotateLabel:'<%=v3%>',annotatePadding:"0px 5px 0px 5px",annotateFontFamily:"'Cuprum'",annotateFontStyle:"normal bolder",annotateFontColor:"rgba(0,0,0,1)",annotateFontSize:12,
+		annotateBorderRadius:"5px",annotateBorder:"1px rgba(170,170,170,0.7) solid ",annotateBackgroundColor:'rgba(255,255,255,0.75)',
+		/*POINT DOT SETTINGS*/
+		pointDotStrokeStyle:"solid",pointDotStrokeWidth : 0.1,pointDotRadius : 4,pointDot : true,
+		graphMin:1,graphMax:10,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,
+		scaleBackdropPaddingY :2,
+		animationEasing:'easeInQuad',animateRotate:true,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,
+		onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> <!--particles javascript-->
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Geese Howard</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="../character_style.css">
+
+<style>
+
+		body{
+	/*margin: 0px 275px 0px;
+	display: inline-block;*/
+	background-color: #480E10;
+	color: #E4E4E4;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #B2A642;
+
+}
+
+nav li a{
+	color: #E5E7E9;
+}
+	.charBox{
+	background-image: url('../images/geeseChar.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 45% 50%;
+	border: solid 3px #BDBDBD;
+	border-top: none;
+}
+
+nav li a:hover{
+	background-color: #181B1E;
+	text-decoration: none;
+	color: white;
+}
+
+.infoBox{
+	background-color: #341F1D;
+	color: #E4E4E4;		/*#E5E7E9: off-white*/
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	max-height: 550px;
+	text-align: center;
+	float: right;
+	padding: 2% 3%;
+	width: 61%;
+	text-align: left;
+	display: block;
+	border: solid 3px #BDBDBD;
+	border-top: none;
+}
+
+.carousel-indicators li{
+	background-color: white;
+}
+
+.carousel-indicators .active{
+	background-color: #D5C650;
+}
+
+#summary a{
+	color: #D5C650;
+}
+
+#media{
+	background-color: #341F1D;
+	width: 100%;
+	border: solid 3px #BDBDBD;
+}
+
+#media p{
+	color: #E4E4E4;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+table {
+	background-color: #341F1D;
+	color: white;
+  	font-family: arial, sans-serif;
+  	font-weight: bold;
+  	border-collapse: collapse;
+  	width: 50%;
+  	margin: 0% 25% 0% 25%;
+}
+
+td, th {
+  border: 1px solid #D5C650;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #1A1A1A;
+}
+
+footer{
+	background-color: #D5C650;
+	color: black;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+	<div id=wholePage> <!--helps with responsiveness-->
+
+	<div id="top">
+<h1>
+	<img src="../images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="../terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<div class="both">
+<div class="charBox">
+	<!--<img src="../images/AkumaBox.png">-->
+</div>
+
+<div class="infoBox">
+		<div id="particles-js">
+		</div>
+
+	<h1 class="first" style="color: #D5C650;">Strengths</h1>
+	<ul>
+		<li>Special cancels and MAX mode cancels</li>
+		<li>Amazing pokes</li>
+		<li>Phenomenal 50/50 mixups</li>
+		<li>Strong i14 launcher</li>
+		<li>Scary pressure</li>
+		<li>Terrific parry/reversal</li>
+	</ul>
+
+	<h1 class="second" style="color: #D5C650;">Weaknesses</h1>
+	<ul style="width: 350px;">
+		<li>Many duckable strings</li>
+		<li>Many risky committments</li>
+		<li>Poor standing punishers without meter</li>
+		<li>Poor launch punishers without meter</li>
+	</ul>
+
+	<div class="rChart">						<!--Below is for the Radar Chart-->
+
+		<h1 class="third" style="color: #D5C650;">Skills</h1>
+
+		<!--radar chart-->
+		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
+
+	</div>
+
+
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="summary">
+	<h1 style="color: #D5C650;">Geese Howard</h1>
+		<p style="font-size: 1.1rem">A very strong and prideful fighter, often scorning his opponents, is a guest character from the SNK series Fatal Fury, King of Fighters, and Art of Fighting. He is a 2D character just like the characters <a href="akuma.html">Akuma</a> and <a href="eliza.html">Eliza</a>. He is often categorized as a very strong character with many pressuring tools to lockdown his opponents; He also has one of the best parry/reversal in the game, which often leads to near death combos if he has meter. However, to fully unlock his potential, the player must have great execution; much like Akuma.
+		</p>
+</div>
+
+<div id="media">
+
+<h1 style="color: #D5C650;">Key Moves</h1>
+
+<p>1. A long ranged projectile that is used as a keepout tool and pressure. The double reppuken is two hits when at point blank range but is only used sometimes as a wall ender.</p>
+
+<p>2. One of his best tools when paired with Max mode (1+2+3). It is a hit confirmable, i14 launcher that allows for massive damage and wall carries; and can be used to get a retaliation out of opponents.</p>
+
+<p>3. A good whiff punisher that is a combo starter and is safe on block.</p>
+
+<p>4. A safe homing move that acts as a launcher on counter hit and a tailspin when used in juggles.</p>
+
+<p>5. Another good homing move that launches on counter hit and tailspin within juggles and is safe on block.</p>
+
+<p>6. A great low when used unpredictably on opponents to pressure them low and can launch on counter hit and be cancelled into MAX mode.</p>
+
+<p>7. Being a 2D character, he has access to special cancellable moves into his qcb, qcf, and hcb moves off these initial moves:
+	<ul>
+		<li>2</li>
+		<li>f+1</li>
+		<li>d+1</li>
+		<li>ws+1</li>
+		<li>d+4</li>
+	</ul>
+</p>
+
+<p>8. One of the best parry/reversal in the game. He is able to change the tide of the match in his favor if successful; and even deadlier when meter is present. Thus making your opponent think twice before applying heavy pressure.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block" controls>
+		<source src="../videos/geese1.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: qcf+1 or qcf+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese2.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: b+3,2 (MAX mode cancel)</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese3.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f+1+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese4.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d/f+2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese5.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: 4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese6.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d+4 (MAX mode cancel)</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese7.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: "2", d+1, or "2,f+1" special cancels</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/geese8.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: hcb+(1+3/2+4/or 1+4)</h5>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+</div>
+
+<div class="players">
+	<h1 style="color: #D5C650;">Notable players who play this character</h1>
+	<table>
+  <tr>
+    <th>Player</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Trungy</td>
+    <td>United States</td>
+  </tr>
+  <tr>
+    <td>Chikurin</td>
+    <td>Japan</td>
+  </tr>
+  <tr>
+    <td>Pekos</td>
+    <td>Japan</td>
+  </tr>
+  <tr>
+    <td>Knee</td>
+    <td>South Korea</td>
+  </tr>
+  <tr>
+    <td>KingJae</td>
+    <td>United Kingdom</td>
+  </tr>
+  <tr>
+    <td>Bronson Tran</td>
+    <td>United States</td>
+  </tr>
+</table>
+
+</div>
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+				$('.carousel').carousel({
+  		interval: 30000
+});
+
+		$('.carousel').on('slide.bs.carousel', function () {
+  		var vid = document.getElementsByTagName("VIDEO");
+  		for (var i = 0; i < vid.length; i++) {
+  			vid[i].pause();
+  		}
+});
+	</script>
+
+	<!--script for radar chart *attributes are listed*-->
+	<script>function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(255,255,255,0.23)",
+		/*OUTLINE COLOR*/
+		strokeColor : "rgba(255,255,255,1)",pointColor : "rgba(213,198,80,1)",markerShape :"diamond",pointStrokeColor : "rgba(255,255,255,1.00)",
+		/*ATTR.POINTS*/
+		data : [7,7,4,9,5,],title:""},]};
+		ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",
+		/****************************************************************************/
+		spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,
+		scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,
+		/*RADAR LINES*/
+		scaleLineColor:"rgba(255,255,255,0.31)",scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,
+		rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",
+		/*SCALE NUMBERS*/
+		scaleFontColor:"rgba(255,255,255,1)",scaleFontSize:12,
+		/*FONT SETTINGS*/
+		pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",pointLabelFontColor:"rgba(213,198,80,1)",pointLabelFontSize:15,
+		angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,
+		/*ANNOTATION SETTINGS*/
+		annotateDisplay:true,annotateLabel:'<%=v3%>',annotatePadding:"0px 5px 0px 5px",annotateFontFamily:"'Cuprum'",annotateFontStyle:"normal bolder",annotateFontColor:"rgba(0,0,0,1)",annotateFontSize:12,
+		annotateBorderRadius:"5px",annotateBorder:"1px rgba(170,170,170,0.7) solid ",annotateBackgroundColor:'rgba(255,255,255,0.75)',
+		/*POINT DOT SETTINGS*/
+		pointDotStrokeStyle:"solid",pointDotStrokeWidth : 0.1,pointDotRadius : 4,pointDot : true,
+		graphMin:1,graphMax:10,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,
+		scaleBackdropPaddingY :2,
+		animationEasing:'easeInQuad',animateRotate:true,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,
+		onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> <!--particles javascript-->
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>
+
+</body>
+</html>

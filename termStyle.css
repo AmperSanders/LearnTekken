@@ -1,0 +1,184 @@
+
+html{
+		height: 100%;
+	}
+
+	body{
+		height: 100%;
+		color: #E4E4E4;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	list-style-type: none;
+	margin: 0;
+	padding-right: 0;
+	padding-left: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+nav li{
+	float: left;
+	width: 20%;
+}
+
+.basic nav li{
+	float: right;
+	width: 33.33%;
+}
+
+nav li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 0px;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	background-color: #111;
+	text-decoration: none;
+}
+
+#wholePage{														/*used to make whole page responsive in addition to bootstrap*/
+	min-width: 800px; 
+	max-width: 1280px;											/*total width is 1290*/
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 5px;
+	position: relative;
+}
+
+
+#top h1{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#top h1 img{
+	height: 26%;
+	width: 26%;	
+}
+
+#top {
+	background-image: url('images/MishimaDojo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%; 
+}
+
+.parallaxEffect{
+	
+	background-image: url("images/termPic.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.basic{
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 0 150px;
+	padding: 1% 5% 1%;
+}
+
+.section{
+	background-color: grey;
+	width: 50%;
+	max-height: 980px;
+	overflow: auto;
+	margin: 0 25% 0;
+	padding-bottom: 1%;
+	display: block;
+}
+
+#genTerm ul{
+	padding: 0 2% 0;
+}
+
+#charTerm ul{
+	padding: 0 2% 0;
+}
+
+
+table{
+	margin: 2% 38% 0%;
+	width: 275px;
+
+}
+
+td, th {
+  border: 3px solid firebrick;
+  text-align: left;
+  padding: 8px;
+}
+
+@media screen and (max-width: 1150px){
+		table{
+			margin: 2% 29% 0%;
+		}
+
+.parallaxEffect{	
+	background-image: url("images/termPic.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.basic{
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 50px 150px;
+	padding: 4%;
+}
+
+.section{
+	background-color: grey;
+	width: 75%;
+	max-height: 980px;
+	overflow: auto;
+	margin: 0 12% 0;
+	display: block;
+}
+	}
+
+	@media (orientation: landscape) and (max-width: 1150px){
+
+.parallaxEffect{	
+	background-image: url("images/termPic.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.basic{
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 95px 150px;
+	padding: 4%;
+}
+
+table{
+			margin: 2% 25% 0%;
+		}
+
+	}
+
+/*#content{
+	position: relative;
+}*/
+
+p{
+	margin: 0;
+	font-style: italic;
+	font-size: 18px;
+}

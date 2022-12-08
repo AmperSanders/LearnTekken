@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+		<html  lang="en-us">
+
+<head>
+		<script src="modernizer-2.js"></script>
+		<title>Tekken: Armor King</title>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, shrink-to-fit=yes">
+
+		<!--PARTICLE EFFECT-->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--End BOOTSTRAP-->
+
+	<!--ZingChart (for radar chart)-->
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+	<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+		<script>
+			 WebFontConfig = {
+			 google:
+			{families: ["Open Sans","Rubik One",]},active: function() {
+			 DrawTheChart(ChartData,ChartOptions,"chart-01","Radar")}
+			};
+		</script>
+
+				<script src="https://livegap.com/charts/js/webfont.js"></script>
+				<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+
+		<script>
+			function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+			}
+		</script>
+
+
+	<link rel="stylesheet" type="text/css" href="../character_style.css">
+
+<style>
+
+		body{
+	/*margin: 0px 275px 0px;
+	display: inline-block;*/
+	background-color: #171717;
+	color: white;
+}
+
+nav ul{															/*below is navigation bar styles*/
+	background-color: #212121;
+
+}
+
+nav li a{
+	color: #B22222;
+}
+	.charBox{
+	background-image: url('../images/AkChar.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 45% 50%;
+	border: solid 3px #009B13;
+	border-top: none;
+}
+
+nav li a:hover{
+	background-color: black;
+	text-decoration: none;
+	color: white;
+}
+
+.infoBox{
+	background-color: #A2A2A2;
+	color: #212121;		/*#E5E7E9: off-white*/
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	max-height: 550px;
+	text-align: center;
+	float: right;
+	padding: 2% 3%;
+	width: 61%;
+	text-align: left;
+	display: block;
+	border: solid 3px #009B13;
+	border-top: none;
+	/*min-width: 61%;*/
+	/*overflow: scroll;
+	margin-right: 5%;
+	position: absolute;
+	margin-left: 1%;
+}*/
+}
+
+.carousel-indicators li{
+	background-color: #009B13;
+}
+
+.carousel-indicators .active{
+	background-color: #B22222;
+}
+
+#media{
+	background-color: #A2A2A2;
+	width: 100%;
+	border: solid 3px #009B13;
+}
+
+#media p{
+	color: #212121;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+table {
+	background-color: #E5E7E9;
+	color: black;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0% 25% 0% 25%;
+}
+
+td, th {
+  border: 1px solid #009B13;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #A2A2A2;
+}
+
+footer{
+	background-color: #009B13;
+	color: black;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+	<div id=wholePage> <!--helps with responsiveness-->
+
+	<div id="top">
+<h1>
+	<img src="../images/Tekken7logo.png" alt="Tekken 7 Logo" title="Tekken 7 Logo">
+</h1>
+</div>
+
+<nav>
+	<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../basic_tech.html">Basic Techniques</a></li>
+			<li><a href="Advance&20Techniques">Advance Techniques</a></li>
+			<li><a href="../terminology.html">Terminology</a></li>
+			<li><a href="About">About</a></li>
+	</ul>
+</nav>
+
+<div class="both">
+<div class="charBox">
+	<!--<img src="../images/AkumaBox.png">-->
+</div>
+
+<div class="infoBox">
+		<div id="particles-js">
+		</div>
+
+	<h1 class="first" style="color: #B22222;">Strengths</h1>
+	<ul>
+		<li>Great poking moves</li>
+		<li>Excellent damage</li>
+		<li>Good whiff punishment</li>
+		<li>Good throw game</li>
+		<li>Good movement</li>
+		<li>Good Okizeme options</li>
+	</ul>
+
+	<h1 class="second" style="color: #B22222;">Weaknesses</h1>
+	<ul style="width: 300px;">
+		<li>Poor tracking</li>
+		<li>Small movelist</li>
+		<li>Lackluster rage drive</li>
+		<li>Short ranged moves</li>
+		<li>Several duckable moves</li>
+	</ul>
+
+	<div class="rChart">						<!--Below is for the Radar Chart-->
+
+		<h1 class="third" style="color: #B22222;">Skills</h1>
+
+		<!--radar chart-->
+		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
+
+	</div>
+
+
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="summary">
+	<h1 style="color: #B22222;">Armor King</h1>
+		<p style="font-size: 1.1rem"> A mysterious character making his debut in Tekken 1 (1994) differing from the Armor King that we know now; has been in every Tekken installment except Tekken 3 and Tekken 4. Armor King has a very simple and straight-forward playstyle, meaning he does not extensively rely on excessive 50/50s, unlike his partner and rival, King. Instead, Armor King focuses on pokes and momentum. Although he has great poking tools, he is very limited in the options he can use to effectively open up an opponent. Therefore, causing the player to rely greatly on their knowledge of the games' fundamentals and matchup experience.
+		</p>
+</div>
+
+<div id="media">
+
+<h1 style="color: #B22222;">Key Moves</h1>
+
+<p>1. This move is great when used properly at the wall because it will wallsplat the opponent; allowing for more damage to be dealt and is a good whiff punishment tool.</p>
+
+<p>2. This is his key i12 frame punisher.</p>
+
+<p>3. This set features three of his best pokes to chip away at the opponent.</p>
+
+<p>4. When used properly, this move allows for a guaranteed follow-up when successfully landed.</p>
+
+<p>5. One of his best and deadliest throw known as "Giant Swing", he can change the tide of a match with this throw and deals massive damage if thrown into a wall. It also has an airborne extension that grabs them from the air while switching sides</p>
+
+<p>6. Another great throw known as "Shining Wizard", this is a command that has to be done while running or can be done instantly (as shown) with tighter execution. Animation is changed if performed on an ariborne opponent.</p>
+
+<p>6. These two moves ("Dark upper" given in older games and his hopkick) are iconic to Armor King, as they are his two main launchers.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block" controls>
+		<source src="../videos/ak1.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f+2,1</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak2.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: b+1,2</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak3.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: d+3 -> d/f+1 -> d+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak4.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: qcf+1 -> d+3</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak5.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,hcf+1</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak6.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,f,F+2+4</h5>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block" controls>
+		<source src="../videos/ak7.mp4" type="video/mp4">
+	</video>
+	<div class="carousel-caption d-block">
+    <h5>Notation: f,n,d,d/f+2 -> u/f+4</h5>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+</div>
+
+<div class="players">
+	<h1 style="color: #B22222;"> Notable players who play this character</h1>
+	<table>
+  <tr>
+    <th>Player</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>JDCR</td>
+    <td>South Korea</td>
+  </tr>
+</table>
+
+</div>
+
+<footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
+</div>  <!--whole page ending div-->
+
+		<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+				$('.carousel').carousel({
+  		interval: 30000
+});
+
+		$('.carousel').on('slide.bs.carousel', function () {
+  		var vid = document.getElementsByTagName("VIDEO");
+  		for (var i = 0; i < vid.length; i++) {
+  			vid[i].pause();
+  		}
+});
+	</script>
+
+	<!--script for radar chart *attributes are listed*-->
+	<script>function MoreChartOptions(){} var ChartData = {labels : ["Execution","Movement","Punishment","Damage","Range",],datasets : [{fillColor :"rgba(178,34,34,0.23)",
+		/*OUTLINE COLOR*/
+		strokeColor : "rgba(178,34,34,1)",pointColor : "rgba(255,0,0,1)",markerShape :"diamond",pointStrokeColor : "rgba(255,255,255,1.00)",
+		/*ATTR.POINTS*/
+		data : [5,8,8,8,4,],title:""},]};
+		ChartOptions= {totalAmplitude:100,decimalSeparator:".",thousandSeparator:",",
+		/****************************************************************************/
+		spaceLeft:0,spaceRight:0,spaceTop:0,spaceBottom:0,
+		scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1.01,
+		/*RADAR LINES*/
+		scaleLineColor:"rgba(0,0,0,0.31)",scaleSteps:5,scaleStepWidth:20,scaleStartValue:0,
+		rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal bold",
+		/*SCALE NUMBERS*/
+		scaleFontColor:"rgba(0,0,0,1)",scaleFontSize:12,
+		/*FONT SETTINGS*/
+		pointLabelFontFamily:"'Cuprum'",pointLabelFontStyle:"normal bold",pointLabelFontColor:"rgba(33,33,33,1)",pointLabelFontSize:15,
+		angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.12)",percentageInnerCutout:50,
+		/*ANNOTATION SETTINGS*/
+		annotateDisplay:true,annotateLabel:'<%=v3%>',annotatePadding:"0px 5px 0px 5px",annotateFontFamily:"'Cuprum'",annotateFontStyle:"normal bolder",annotateFontColor:"rgba(0,0,0,1)",annotateFontSize:12,
+		annotateBorderRadius:"5px",annotateBorder:"1px rgba(170,170,170,0.7) solid ",annotateBackgroundColor:'rgba(255,255,255,0.75)',
+		/*POINT DOT SETTINGS*/
+		pointDotStrokeStyle:"solid",pointDotStrokeWidth : 0.1,pointDotRadius : 4,pointDot : true,
+		graphMin:1,graphMax:10,scaleShowLabelBackdrop :false,scaleBackdropColor:'rgba(0,0,0,1)',scaleBackdropPaddingX :2,
+		scaleBackdropPaddingY :2,
+		animationEasing:'easeInQuad',animateRotate:true,animationByDataset:true,animationLeftToRight:true,animationSteps:200,animation : true,
+		onAnimationComplete : function(){MoreChartOptions()}}; DrawTheChart(ChartData,ChartOptions,"chart-01","Radar");
+	</script>
+
+	<script src="../js/particle.js"></script> <!--particles javascript-->
+
+	<script>
+		var canvas = document.getElementById('chart-01');
+		canvas.width  = 450;
+canvas.height = 300;
+canvas.style.width  = '450px';
+canvas.style.height = '300px';
+	</script>
+
+</body>
+</html>
