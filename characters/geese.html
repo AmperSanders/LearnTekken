@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 		<html  lang="en-us">
-
 <head>
 		<script src="modernizer-2.js"></script>
 		<title>Tekken: Geese Howard</title>
@@ -33,29 +32,23 @@
 			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
 			}
 		</script>
-
-
 	<link rel="stylesheet" type="text/css" href="../character_style.css">
-
 <style>
 
-		body{
-	/*margin: 0px 275px 0px;
-	display: inline-block;*/
+body{
 	background-color: #480E10;
 	color: #E4E4E4;
 }
 
-nav ul{															/*below is navigation bar styles*/
+nav ul{															
 	background-color: #B2A642;
-
 }
 
 nav li a{
 	color: #E5E7E9;
 }
 	.charBox{
-	background-image: url('../images/geeseChar.png');
+	background-image: url('../images/geeseChar.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 45% 50%;
@@ -71,7 +64,7 @@ nav li a:hover{
 
 .infoBox{
 	background-color: #341F1D;
-	color: #E4E4E4;		/*#E5E7E9: off-white*/
+	color: #E4E4E4;		
 	z-index: 1;
 	position: relative;
 	height: 100%;
@@ -171,9 +164,7 @@ footer{
 </nav>
 
 <div class="both">
-<div class="charBox">
-	<!--<img src="../images/AkumaBox.png">-->
-</div>
+<div class="charBox"></div>
 
 <div class="infoBox">
 		<div id="particles-js">
@@ -197,17 +188,11 @@ footer{
 		<li>Poor launch punishers without meter</li>
 	</ul>
 
-	<div class="rChart">						<!--Below is for the Radar Chart-->
-
+	<div class="rChart"><!--Below is for the Radar Chart-->
 		<h1 class="third" style="color: #D5C650;">Skills</h1>
-
 		<!--radar chart-->
 		<canvas  id="chart-01" width="450" height="300" style="border-radius:0px; padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;"></canvas>
-
 	</div>
-
-
-
 </div>
 </div>
 
@@ -374,7 +359,6 @@ footer{
 
 <footer><em>Learn Tekken</em> is a personal project designed to help and inspire tekken players of all skill levels <em>2019.</em></footer>
 </div>  <!--whole page ending div-->
-
 		<!--BOOTSTRAP JS-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -383,7 +367,6 @@ footer{
 				$('.carousel').carousel({
   		interval: 30000
 });
-
 		$('.carousel').on('slide.bs.carousel', function () {
   		var vid = document.getElementsByTagName("VIDEO");
   		for (var i = 0; i < vid.length; i++) {
