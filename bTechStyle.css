@@ -35,9 +35,9 @@ nav li a:hover{
 	text-decoration: none;
 }
 
-#wholePage{														/*used to make whole page responsive in addition to bootstrap*/
+#wholePage{/*used to make whole page responsive in addition to bootstrap*/
 	min-width: 800px; 
-	max-width: 1280px;											/*total width is 1290*/
+	max-width: 1280px;/*total width is 1290*/
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px 5px;
@@ -143,10 +143,6 @@ table{
 			margin: 2% 25% 0%;
 		}
 	}
-
-/*#content{
-	position: relative;
-}*/
 
 p{
 	margin: 0;
