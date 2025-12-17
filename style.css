@@ -2,12 +2,12 @@
 	min-width: 793px;
 }
 
-.tile{
-	border: 3px solid black;
+.tile {
+	border: 3px solid #333;
 	margin: 20px 20px;
-	padding: 15px auto;
 	position: relative;
 	display: inline-block;
+	background-color: #ac1b1b;
 }
 
 .tile img{
@@ -20,6 +20,15 @@
 	bottom: 8px;
 	left: 55px;
 	/*color: #00FF00;*/
+}
+
+.tile:hover {
+	box-shadow: 0 8px 16px 0 rgba(11, 68, 145,1);
+}
+
+.not-done img {
+    cursor: not-allowed;
+    opacity: 0.4;
 }
 
 *{
